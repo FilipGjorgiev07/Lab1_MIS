@@ -4,12 +4,10 @@ import '../models/exam.dart';
 
 class ExamCard extends StatelessWidget {
   final Exam exam;
-  final int totalExams;
 
   const ExamCard({
     super.key,
     required this.exam,
-    required this.totalExams,
   });
 
   @override
@@ -82,17 +80,17 @@ class ExamCard extends StatelessWidget {
             ],
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.only(bottom: 10.0),
-          child: Text(
-            "Вкупно испити: $totalExams",
-            style: const TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 16,
-              color: Colors.pink,
-            ),
-          ),
-        ),
+        // Padding(
+        //   padding: const EdgeInsets.only(bottom: 10.0),
+        //   child: Text(
+        //     "Вкупно испити: $totalExams",
+        //     style: const TextStyle(
+        //       fontWeight: FontWeight.bold,
+        //       fontSize: 16,
+        //       color: Colors.pink,
+        //     ),
+        //   ),
+        // ),
       ],
     );
   }

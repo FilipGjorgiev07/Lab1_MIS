@@ -51,7 +51,7 @@ class ExamDetails extends StatelessWidget {
                 const SizedBox(height: 8),
                 Row(
                   children: [
-                    const Icon(Icons.timeline_sharp),
+                    const Icon(Icons.access_time),
                     const SizedBox(width: 8),
                     Text(timeFormat.format(exam.dateTime)),
                   ],

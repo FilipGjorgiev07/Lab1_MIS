@@ -18,7 +18,6 @@ class HomeScreen extends StatelessWidget {
       Exam(subject: "Бизнис и менаџмент", dateTime: DateTime(2025, 11, 18, 12, 30), rooms: ["Лаб. 200аб"]),
       Exam(subject: "Основи на веб дизајн", dateTime: DateTime(2026, 3, 15, 9, 30), rooms: ["Лаб. 138"]),
       Exam(subject: "Објектно ориентирано програмирање", dateTime: DateTime(2025, 11, 25, 8, 0), rooms: ["Лаб. 200аб"]),
-
     ];
   }
 
@@ -39,12 +38,26 @@ class HomeScreen extends StatelessWidget {
           return GestureDetector(
             onTap: () => Navigator.push(
               context,
-              MaterialPageRoute(
-                  builder: (_) => ExamDetails(exam: exam)),
+              MaterialPageRoute(builder: (_) => ExamDetails(exam: exam)),
             ),
             child: ExamCard(exam: exam),
           );
         },
+      ),
+      bottomNavigationBar: BottomAppBar(
+        color: Colors.grey,
+        child: Padding(
+          padding: const EdgeInsets.all(12.0),
+          child: Text(
+            "Вкупно испити: ${exams.length}",
+            textAlign: TextAlign.center,
+            style: const TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 16,
+              color: Colors.white,
+            ),
+          ),
+        ),
       ),
     );
   }
